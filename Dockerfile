@@ -1,5 +1,5 @@
 #### Stage 1
-FROM node as buildhell
+FROM node as build
 ARG ARG_API_URL=localhost
 ENV API_URL=$ARG_API_URL
 COPY ./package.json /usr/angular-workdir/
