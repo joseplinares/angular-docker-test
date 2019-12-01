@@ -4,9 +4,9 @@ ARG ARG_API_URL=localhost
 ENV API_URL=$ARG_API_URL
 COPY ./package.json /usr/angular-workdir/
 WORKDIR /usr/angular-workdir
-RUN npm install
+RUN sudo npm install
 COPY ./ /usr/angular-workdir
-RUN npm run build-prod
+RUN sudo npm run build-prod
 
 #### Stage 2
 FROM nginx
