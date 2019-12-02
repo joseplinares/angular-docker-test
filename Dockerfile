@@ -1,9 +1,11 @@
 #### Stage 1
 FROM node as build
+ARG ARG_API_URL=localhost
+ENV API_URL=$ARG_API_URL
+COPY ./package.json /usr/workdir/
 WORKDIR /usr/workdir
-COPY package.json package.json
 RUN npm install
-COPY ./ .
+COPY ./ /usr/workdir
 RUN npm run build-prod
 
 #### Stage 2
