@@ -1,5 +1,5 @@
 #### Stage 1
-# FROM node as build
+FROM node as build
 # WORKDIR /usr/workdir
 # COPY package.json package.json
 # RUN npm install
